@@ -23,7 +23,6 @@ class FeatureMatrix:
     def get_folder_data(self, folder):
         data_list = []
         for subfolder in ["FakeNewsContent", "RealNewsContent"]:
-            for file in os.listdir(self.base_path + folder + "/" + subfolder):
                 if file.endswith(".json"):
                     data_list.append(self.get_data_from_file(self.base_path + folder + "/" + subfolder + "/" + file))
 

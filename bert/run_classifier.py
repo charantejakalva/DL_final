@@ -21,14 +21,13 @@ from __future__ import print_function
 import collections
 import csv
 import os
-import modeling
-import optimization
-import tokenization
-import tensorflow as tf
+from bert import modeling
+from bert import optimization
+from bert import tokenization
+# import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 flags = tf.flags
-
-FLAGS = flags.FLAGS
 
 ## Required parameters
 flags.DEFINE_string(
